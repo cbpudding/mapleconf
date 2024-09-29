@@ -1,0 +1,2 @@
+{%for part in partition%}PARTUUID={{part.id}} {{part.mountpoint}} {{part.format}} {%if part.options | length > 0%}{{part.options | join(",")}}{%else%}defaults{%endif%} 0 {{part.fsck}}
+{%endfor%}
